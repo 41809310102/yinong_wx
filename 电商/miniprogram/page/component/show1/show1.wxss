@@ -1,0 +1,131 @@
+.item-box {
+  width: 100%;
+  position: relative;
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title-box {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  left: 5%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+  color: #fff;
+}
+
+.video-image-box {
+  height: 400rpx;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: 30rpx;
+  position: relative;
+}
+
+.video-cover-box {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  text-align: center;
+}
+
+.video-image {
+  height: 400rpx;
+  width:600rpx;
+}
+
+.video {
+  height: 400rpx;
+  width: 100%;
+  margin: 0 30rpx 0 0;
+  position: relative;
+}
+
+.video-image-play {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  top: calc(50% - 40rpx);
+  left: calc(50% - 40rpx);
+  z-index: 100;
+}
+
+.carBotn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+
+.carBtnli {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.carPoto {
+  width: 80rpx;
+  height: 80rpx;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.carName {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.carShar {
+  width: 45rpx;
+}
+
+.carNum {
+  font-size: 25rpx;
+  color: #aaa;
+  margin-left: 15rpx;
+}
+
+.carSharbt::after {
+  border: none;
+}
+
+.carSharbt {
+  width: 80rpx;
+  height: 80rpx;
+  background: transparent;
+}
+
+.carfrequency {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  left: 5%;
+  position: absolute;
+  top: 350rpx;
+}
+
+.carFreq {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.carTime {
+  padding: 5rpx 8rpx;
+  background: #000;
+  opacity: 0.6;
+  font-size: 25rpx;
+  color: #fff;
+  border-radius: 25rpx;
+}
+

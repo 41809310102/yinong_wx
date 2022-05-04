@@ -1,0 +1,38 @@
+<form action="get"  bindsubmit="formtap" >
+  <view class="item">
+    <view class="txt">贵姓</view>
+    <input type="text" class="input" placeholder-class="phcolor"  name="name" placeholder-class="c-ff0" placeholder="请输入姓名"></input>
+  </view>
+  <view class="item0">
+    
+    <radio-group class="checked0" name='checked'>
+    <radio color="#00cbbb"  value="男士"  >男士</radio>
+    <radio color="#00cbbb"  value="女士" >女士</radio>
+  </radio-group>
+    
+  </view> 
+  <view class="item">
+    <view class="txt">约车类型</view>
+    <radio-group  class="checkbox_group" name="radio" bindchange="handel_checkbox"   bname='ckecked_box'>
+<radio color="#00cbbb" wx:for="{{checkbox_list}}"  value="{{item.value}}" >{{item.name}}</radio>
+
+    </radio-group>
+
+  </view>
+   <view class="item">
+    <view class="txt">出发地</view>
+    <input type="text" placeholder-class="c-ff0"  placeholder-class="phcolor" value="{{foundlocation}}" class="input" placeholder="请输入内容" name="foundlocation"></input>
+    <image  bindtap="handelmap" src="../tabbar/定位.png"></image>
+  </view>
+   <view class="item">
+    <view class="txt">到达地</view>
+    <input type="text"  placeholder-class="phcolor" placeholder-class="c-ff0" value="{{founddetail}}" class="input" placeholder="请输入内容" name="founddetail"></input>
+    <image bindtap="handelmap0"  src="../tabbar/定位.png"></image>
+    </view>  
+   <view class="item">
+    <view class="txt">联系方式</view>
+    <input type="number" class="input" bindinput="handelphone"  placeholder-class="phcolor" placeholder-class="c-ff0" name="foundphone" placeholder="请输入手机号"></input>
+  </view> 
+  
+  <button class="button" form-type="submit">下单 </button>
+</form>

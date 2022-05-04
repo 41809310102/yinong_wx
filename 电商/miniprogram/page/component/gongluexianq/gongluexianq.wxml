@@ -1,0 +1,48 @@
+<!--miniprogram/page/component/release_goods/release_goods.wxml-->
+<view class='main'>
+  <view class="{{tempFilePaths==''?'shangchuan':''}}" >
+  <!-- 三目运算符判断显示是否为选择的图片以及类（class）选择器中样式 -->
+    <image bindtap='shangchuan' class="{{tempFilePaths==''?'image1':'image2'}}"  mode='widthFix	' src="{{tempFilePaths==''?'/image/shangchuan.png':tempFilePaths}}"></image>
+  </view>
+  <form bindsubmit='fabu'>
+    <view class='title'>
+      <textarea placeholder="攻略名称(50字以内,必填)" maxlength="150" name="name"></textarea>
+      <textarea placeholder="描述(必填)" maxlength="200000" name="details"></textarea>
+      <view class='type'>
+        <text>类目</text>
+        <view>
+          <picker bindchange="bindchange" range='{{type}}' value='index'>
+            <view>选中(必填): {{type_value}}</view>
+          </picker>
+        </view>
+      </view>
+      
+
+    </view>
+   
+    <view class='title'>
+   
+      <view class='bianma'>
+        <text>注意事项</text>
+        <view>
+          <input placeholder="地址(必填)" name="Candi" type="text"></input>
+        </view>
+      </view>
+      
+      <view class='bianma'>
+        <text>化肥推荐</text>
+        <view>
+          <input placeholder="" name="effect" type="text"></input>
+        </view>
+      </view>
+    </view>
+    <view class='title'>
+      
+     
+    </view>
+    <view class='button'>
+      <button class='button1' form-type='reset' bindtap='reset'>清空</button>
+      <button class='button2' form-type='submit'>立即发布</button>
+    </view>
+  </form>
+</view>

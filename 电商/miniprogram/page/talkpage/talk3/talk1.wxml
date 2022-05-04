@@ -1,0 +1,20 @@
+<view class="pubTitle">
+<view class="txt">市场信息</view>
+<navigator class="more">更多 ></navigator>
+</view>
+
+<view class='category' wx:for="{{new_product}}" wx:item="item" wx:index="index" wx:key="inedx" data-item="{{item}}">
+        <view class='category-child'>
+          <image src='{{item.img_src}}'> </image>
+        </view>
+        <view class='category-next'>
+          <view class='category-next-child'>{{item.name}}</view>
+          <view class="newest-text ">
+            <text class='cruuent_price'>作者:{{item.actorname}}</text>
+            <text class='cruuent_price' style="margin-left: -95px;">浏览量:{{item.reader}}</text>
+            <image src='cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/images/ji.png' mode='widthFix' style='width:120rpx; margin-left: -50px;' bindtap='goToProduct' data-id="{{item._id}}"></image>
+          </view>
+          <text class='cruuent_price'>时间:{{item.time}}</text>
+
+        </view>
+      </view>

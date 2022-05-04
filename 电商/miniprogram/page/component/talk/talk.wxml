@@ -1,0 +1,79 @@
+
+<view class="top_contain">
+      <view class="des_contain">
+            <view class="name">益农官方论坛</view>
+            <view class="sign">优质文章，可以直接推在益农资料库中！并颁发奖励</view><!--预告部分文档-->
+      </view>
+      <view class="avator_box">
+            <image class="avator" src="../../../image/logo2.png"></image> 
+      </view>
+</view>
+<view class="works">
+    <view class="pubTitle">
+<view class="txt">专栏推荐</view>
+<navigator url="../component/more/more" class="more"></navigator>
+  </view>
+  </view>
+<view class="wkMain">
+  <navigator class="box" url="../../talkpage/talk1/talk1">
+    <image class="pic" src="https://www.ciyew.com/wp-content/uploads/2018/10/518c409a6521b0f7eda4-768x357.jpg"></image>
+    <view class="ceng">
+      <view class="title">农业政策专区</view>
+       <view class="line"></view>
+       <view class="des">News points</view>
+    </view>
+  </navigator>
+
+  <navigator class="box"url="../../talkpage/talk2/talk1">
+    <image class="pic" src="https://tse4-mm.cn.bing.net/th/id/OIP.uvCvjpxdh4OchoAavz0OUgHaE9?pid=ImgDet&rs=1"></image>
+    <view class="ceng">
+      <view class="title">种植攻略专区</view>
+       <view class="line"></view>
+       <view class="des">Military News</view>
+    </view>
+  </navigator>
+
+  <navigator class="box"url="../../talkpage/talk3/talk1">
+    <image class="pic" src="https://tse4-mm.cn.bing.net/th/id/OIP.7hUzR-Z_Q6XZuQJNhJU64QHaE6?pid=ImgDet&rs=1"></image>
+    <view class="ceng">
+      <view class="title">批发市场专区</view>
+       <view class="line"></view>
+       <view class="des">Entertainment</view>
+    </view>
+  </navigator>
+
+  <navigator class="box"url="../../talkpage/talk4/talk1">
+    <image class="pic" src="https://th.bing.com/th/id/Re66cb0447874c63993a58e85eae827bd?rik=sUaQjjtBnWbiIQ&riu=http%3a%2f%2fpic.616pic.com%2fys_bnew_img%2f00%2f13%2f73%2fLrCzzo1O4m.jpg&ehk=Ga%2fQN2KfvkZ9Mqr772mtg64rQS%2fLQaoESivvsGruWuo%3d&risl=&pid=ImgRaw"></image>
+    <view class="ceng">
+      <view class="title">提前预约专区</view>
+       <view class="line"></view>
+       <view class="des">electronic sports</view>
+    </view>
+  </navigator>
+
+  <navigator class="box"url="../../talkpage/talk5/talk1">
+    <image class="pic" src="https://pic.52112.com/180313/180313_64/uoGbXQhKXe_small.jpg"></image>
+    <view class="ceng">
+      <view class="title">农业视频专区</view>
+       <view class="line"></view>
+       <view class="des">vodio column</view>
+    </view>
+  </navigator>
+
+  <navigator class="box"url="../../talkpage/talk6/talk1">
+    <image class="pic" src="https://th.bing.com/th/id/Rfaf61b00798f66b075b4f73c92931571?rik=TO8N3vYjQY35cg&riu=http%3a%2f%2fpic126.huitu.com%2fres%2f20190723%2f915016_20190723192152237060_1.jpg&ehk=Oltck%2fqrdyZNupiCSNZpj%2bdV7TTZsKqgQ20rYdasM0w%3d&risl=&pid=ImgRaw"></image>
+    <view class="ceng">
+      <view class="title">吐槽专区</view>
+       <view class="line"></view>
+       <view class="des">Fashion trend</view>
+    </view>
+  </navigator>
+  </view>
+  <view class="but">
+    <navigator url="../../talkpage/addProduct/addProduct">
+    <button  class="but" type="warn" >发布文章</button>
+  </navigator>
+  <navigator url="../../talkpage/shorevedio/shorevedio">
+    <button  class="but" type="warn" style="background:green">发布视频</button>
+  </navigator>
+  </view>

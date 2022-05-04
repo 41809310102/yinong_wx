@@ -1,0 +1,47 @@
+<view class="pubTitle">
+<view class="txt">精彩视频</view>
+</view>
+
+<view class="container">
+  <!--首页-->
+
+  <scroll-view class='nav-page'>
+    <view class="item-box " wx:for="{{video}}" wx:key="item">
+      <!-- 视频播放层 -->
+      <video src="{{item.img_src}}"  data-id="{{index}}" class='video' wx:if="{{_index == index}}" objectFit='contain' autoplay='true' controls></video>
+      <!-- 标题层 -->
+      <view class="video-title-box">
+        {{item.name}}
+      </view>
+      <!-- 视频图片层 -->
+      <view data-id="{{index}}" class="video-image-box" style="display: {{ _index == index ? 'none' : 'block' }};" bindtap="videoPlay">
+        <view class="video-cover-box">
+          <image class="video-image"  mode="widthFix"  src="cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/video/1.png" mode="aspectFit">
+          </image>
+        </view>
+        <!-- 视频按钮 -->
+        <image class="video-image-play" src="https://sucai.suoluomei.cn/sucai_zs/images/20200321105958-suspended%403x.png" mode="scaleToFill"></image>
+      </view>
+      <view class="carfrequency ">
+        <text class="carFreq">{{item.reader}}次播放</text>
+      </view>
+      <view class="carBotn">
+        <view class="carBtnli" >
+          <image class="carPoto" src="cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/video/1.png"></image>
+          <text class="carName" >{{item.fenlei}}</text>
+        </view>
+        <view class="carBtnli">
+          <button class="carSharbt" data-id="{{item.id}}" open-type="share">
+            <image class="carShar" mode="widthFix" src="https://sucai.suoluomei.cn/sucai_zs/images/20200321110655-share%403x.png"></image>
+          </button>
+          <view>
+            <image class="carShar1" mode="widthFix" bindtap='goToProduct' data-id="{{item._id}}" src="../vediodes/img/pinglun.png"></image>
+          </view>
+          <view class="say">
+           <text >分享</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

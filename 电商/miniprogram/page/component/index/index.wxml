@@ -1,0 +1,127 @@
+<wxs module="filter" src="../details/toFixed.wxs"></wxs>
+<wxs src="./center.wxs" module="intercept" />
+
+<view class="top_box" >
+    <text class="search_text1">定位</text>
+    <image  class="top_list"bindtap="handelmap" src="cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/banners/dingwei.png"></image>
+    <block wx:for="{{register}}" wx:key="{{index}}">
+    <view class="search_text2" wx:if="{{register[index].address==''}}">未定位</view>
+    <view class="search_text2" wx:if="{{register[index].address!=''}}">{{intercept.substr(item.address)}}</view>
+  </block>
+      <view class="search_box" bindtap="search">
+            <image class="search_ico" src="../../../image/search.png"></image>
+            <view class="search_text">搜索</view>
+      </view>
+</view>
+   
+  <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banner1}}" wx:key="{{index}}">
+      <navigator url="{{item.url}}">
+      <swiper-item  >
+        <image src="{{item.img}}" class="swiper image" width="100%"/>
+      </swiper-item>
+    </navigator>
+    </block>
+  </swiper>
+  
+  <scroll-view class="major" scroll-x>   
+      <navigator  class="box" url="../release_goods/release_goods">
+        <image class="pic" src="../../../image/kecheng2.png"/>
+        <view class="txt">农产品售卖</view>
+      </navigator>
+      <navigator class="box" url="../buy/buy">
+        <image class="pic" src="../../../image/kecheng4.png"/>
+        <view class="txt">在线购买</view>
+      </navigator>
+      <navigator class="box"url="../yuyue/yuyue">
+        <image class="pic" src="../../../image/kecheng3.png"/>
+        <view class="txt">农机预约</view>
+      </navigator>
+      <navigator class="box" url="../gonglue/gonglue">
+        <image class="pic" src="../../../image/kecheng1.png"/>
+        <view class="txt">农业攻略</view>
+      </navigator>
+      <navigator class="box" url="../fuwu/fuwu">
+        <image class="pic" src="../../../image/kecheng5.png"/>
+        <view class="txt">人工服务</view>
+      </navigator>   
+ 
+</scroll-view>
+
+
+
+  
+
+
+  <wxs module="filter" src="../details/toFixed.wxs"></wxs>
+
+      <!-- <view wx:if="{{hasAddress}}" class="address-list">
+        <view>{{address.name}}</view>
+        <view>{{address.phone}}</view>
+        <view>{{region}} {{address.detail}}</view>
+      </view> -->
+ 
+    <view class="orders-box">
+      <view class="goods-tab-box">
+        <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">本地新品</view>
+        <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">扶贫精品</view>
+        <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">附近农机</view>
+        <view class="goods-content">
+          <view wx:if="{{curIndex == 0}}">
+           <view class="newest">
+    <view class="newest-box">
+      <block wx:for="{{new_product}}" wx:item="item" wx:key="index">
+        <view class="newest-list" bindtap='cart' data-url="{{item}}">
+            <image src="{{item.url}}" mode='widthFix'></image>
+            <view class="newest-text1">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text  class='cruuent_price'>¥ {{filter.tofix(item.ago_price)}}</text>
+              <text class='newest-text-child'>{{item.sales_volume}}人付款</text>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+ <view wx:if="{{curIndex == 1}}">
+    <view class="newest">
+      <view class="newest-box">
+      <block wx:for="{{fuping_product}}" wx:item="item" wx:key="index">
+        <view class="newest-list" bindtap='cart' data-url="{{item}}">
+            <image src="{{item.url}}" mode='widthFix'></image>
+            <view class="newest-text1">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text  class='cruuent_price'>¥ {{filter.tofix(item.ago_price)}}</text>
+              <text class='newest-text-child'>{{item.sales_volume}}人付款</text>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+        
+          </view>
+<view wx:if="{{curIndex == 2}}">
+   <view class="newest">
+    <view class="newest-box">
+      <block wx:for="{{nongji_product}}" wx:item="item" wx:key="index">
+        <view class="newest-list" bindtap='cart' data-url="{{item}}">
+            <image src="{{item.url}}" mode='widthFix'></image>
+            <view class="newest-text1">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text  class='cruuent_price'>¥ {{filter.tofix(item.ago_price)}}</text>
+              <text class='newest-text-child'>{{item.sales_volume}}人付款</text>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+          </view>
+        </view>
+      </view>
+    </view>

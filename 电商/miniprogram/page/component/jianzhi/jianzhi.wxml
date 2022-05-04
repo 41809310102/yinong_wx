@@ -1,0 +1,67 @@
+<!--miniprogram/page/component/release_goods/release_goods.wxml-->
+<view class='main'>
+  <textarea placeholder="上传证件照/资格证/学生证" maxlength="150" name="name"></textarea>
+  <view class="{{tempFilePaths==''?'shangchuan':''}}" >
+  <!-- 三目运算符判断显示是否为选择的图片以及类（class）选择器中样式 -->
+    <image bindtap='shangchuan' class="{{tempFilePaths==''?'image1':'image2'}}"  mode='widthFix	' src="{{tempFilePaths==''?'/image/shangchuan.png':tempFilePaths}}"></image>
+  </view>
+  <form bindsubmit='fabu'>
+    <view class='title'>
+      <textarea placeholder="兼职要求(50字以内,必填)" maxlength="250" name="name"></textarea>
+      <textarea placeholder="自我描述（必填)" maxlength="250" name="details"></textarea>
+      <view class='type'>
+        <text>兼职类别</text>
+        <view>
+          <picker bindchange="bindchange" range='{{type}}' value='index'>
+            <view>选中(必填): {{type_value}}</view>
+          </picker>
+        </view>
+      </view>
+      
+
+    </view>
+    <view class='title'>
+      <view class='bianma'>
+        <text>时间</text>
+        <view>
+          <input placeholder="必填" name="ago_price" type="number"></input>
+        </view>
+      </view>
+      
+     
+      <view class='bianma'>
+        <text>电话号码</text>
+        <view>
+          <input placeholder="电话号码" name="yunfei" type="number"></input>
+        </view>
+      </view>
+    </view>
+    <view class='title'>
+   
+      <view class='bianma'>
+        <text>你的详细地址</text>
+        <view>
+          <input placeholder="地址(必填)" name="Candi" type="text"></input>
+        </view>
+      </view>
+      <view class='bianma'>
+        <text>发表日期</text>
+        <view>
+          <input placeholder="日期(必填)" name="be_listed" type="text"></input>
+        </view>
+      </view>
+      <view class='bianma'>
+        <text>薪资要求</text>
+        <view>
+          <input placeholder="简介" name="effect" type="text"></input>
+        </view>
+      </view>
+      
+    </view>
+
+    <view class='button'>
+      <button class='button1' form-type='reset' bindtap='reset'>清空</button>
+      <button class='button2' form-type='submit'>立即发布</button>
+    </view>
+  </form>
+</view>

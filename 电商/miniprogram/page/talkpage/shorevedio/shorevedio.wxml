@@ -1,0 +1,33 @@
+<view class="content">
+  <view class="body">
+  <text>视频标题:</text>
+  <input bindinput="getName" value="{{name}}"/>
+</view>
+<view class="body">
+  <text>分类:</text>
+  <radio-group bindchange="getClassify">
+    <radio wx:for="{{classifyObject}}" value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</radio>
+  </radio-group>
+</view>
+<view class="body">
+  <text>你的昵称:</text>
+  <input bindinput="getactorname"   maxlength="200000"  value="{{price}}" />
+</view>
+
+<!-- <view class="body">
+  <text>商品库存:</text>
+  <input bindinput="getStock"/>
+</view> -->
+<!-- <view class="body">
+  <text>是否推荐:</text>
+  <radio-group bindchange="isRecommend">
+    <radio wx:for="{{recommendObject}}" value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</radio>
+  </radio-group>
+</view>-->
+<view class="image">
+  <text>视频:</text>
+  <button type="primary" style="width:50%" bindtap="uploadVideo" wx:if="{{VideoUrl == ''}}">添加视频</button>
+  <video  mode="widthFix"  style="width:600rpx;height:400rpx;margin:0 auto"  src="{{VideoUrl}}"></video>
+</view>
+<button style="margin-top:30rpx;background-color:#00f;color:#fff;width:50%;margin-bottom:30rpx" bindtap="submit">提交</button>
+</view>

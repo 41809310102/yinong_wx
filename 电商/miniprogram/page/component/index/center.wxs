@@ -1,0 +1,15 @@
+var substr = function(val) {
+  if (val.length == 0 || val == undefined) {
+  return false;
+  
+  } else if (val.length > 0) {
+  return val.substring(3,9) + "...";
+  
+  }else{
+  return val;
+  
+  }
+  
+  }
+  //暴露substr方法
+module.exports.substr =substr

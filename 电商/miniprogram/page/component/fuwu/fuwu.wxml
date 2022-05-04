@@ -1,0 +1,116 @@
+<!--pages/orderTime/index.wxml-->
+<view class="top_contain">
+      <view class="des_contain">
+            <view class="name">益农农业兼职</view>
+            <view class="sign">同城劳动，互相帮助</view>
+      </view>
+      <view class="avator_box">
+            <image class="avator" src="../../../image/logo2.png"></image>
+      </view>
+</view>
+<view class="contain">
+      <view class="title">使用简介</view>
+      <view class="description">
+            <text space="emsp" decode="{{ true }}">{{des}}</text>
+      </view>
+      <view class="description">
+          <!--  <view class="tip" bindtap="copy" data-copy="https://github.com/xuhuai66" data-name="链接">
+                  <view>官网</view>:
+                  <text>https://github.com/xuhuai66</text>
+            </view>-->
+            <view class="tip" bindtap="copy" data-copy="1604026596" data-name="QQ">
+                  <view>电话</view>:
+                  <text>18891636438</text>
+            </view>
+      </view>
+</view>
+<wxs module="filter" src="../details/toFixed.wxs"></wxs>
+<view class="main">
+  <view class="search-box">
+    <view class='input'>
+      <input class="search-input" placeholder="搜索" value="{{value}}" bindconfirm="enterEvent" bindinput="searchInput" />
+      <icon class="weui-icon-search_in-box search-icon" type="search" size="16"></icon>
+      <text class="search-btn" wx:if="{{showResult}}" bindtap="cancelSearch">取消</text>
+    </view>
+  </view>
+  <block wx:if="{{showResult}}">
+    <block wx:if="{{yes_result}}">
+      <view class="newest-box">
+        <block wx:for="{{result}}" wx:item="item" wx:key="index">
+          <view class="newest-list" bindtap='cart' data-url="{{item}}">
+            <image src="{{item.url}}"></image>
+            <view class="newest-text1">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text>¥ {{filter.tofix(item.ago_price)}}</text>
+              <text class='newest-text-child'>{{item.sales_volume}}人预约成功</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+    <view class="result-null" wx:else>
+      <view class="null-tips">Oh~~ 搜索结果为空！</view>
+      <view class="recommend-title">
+        <text>相关推荐</text>
+      </view>
+
+      <view class="newest-box">
+        <block wx:for="{{xiangguantuijie}}" wx:item="item" wx:key="index">
+          <view class="newest-list" bindtap='cart' data-url="{{item.url}}">
+            <image src="{{item.url}}"></image>
+            <view class="newest-text1 ">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text>¥ {{item.price}}</text>
+              <text class='newest-text-child'>2122人付款</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- <view class="recommend-box">
+                <view class="result-list" wx:for="{{result}}" wx:key="index">
+                    <navigator url="{{item.url}}">
+                        <image src="{{item.thumb}}"></image>
+                        <view class="result-text">
+                            <text>{{item.title}}</text>
+                        </view>
+                        <view class="result-text">
+                            <text>￥ {{item.price}}</text>
+                        </view>
+                    </navigator>
+                </view>
+            </view> -->
+    </view>
+  </block>
+  <view class="init-page" wx:else>
+    <view wx:if="{{fuwu.length > 0}}">
+      <view class="title">
+        <text>搜索记录</text>
+      </view>
+      <view class="tags">
+        <text wx:for="{{fuwu}}" wx:key="index" data-text="{{item}}" bindtap="fuwuyHandle">{{item}}</text>
+      </view>
+    </view>
+    <view class="title">
+      <text>热点推荐</text>
+    </view>
+    <view class="tags">
+      <text wx:for="{{hot}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+    </view>
+  </view>
+  <!-- <view class="keywords" wx:if="{{showKeywords}}">
+    <view class="keywords-item" wx:for="{{keywords}}" wx:key="index" data-text="{{item.name}}" bindtap="keywordHandle">{{item.name}}</view>
+  </view> -->
+
+
+</view>
+<view class='containt'>
+  <view class='operate'>
+   <button class='save'  open-type="getUserInfo"  bindgetuserinfo="fabu">我要兼职</button>
+   <button class='save'  bindtap="keifu">客服咨询</button>
+  </view>
+</view>
+

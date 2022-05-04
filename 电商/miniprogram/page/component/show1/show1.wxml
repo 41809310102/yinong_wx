@@ -1,0 +1,38 @@
+<view class="container">
+  <!--首页-->
+  <scroll-view class='nav-page'>
+    <view class="item-box " wx:for="{{video}}" wx:key="item">
+      <!-- 视频播放层 -->
+      <video src="{{item.video}}" data-id="{{index}}" class='video' wx:if="{{_index == index}}" objectFit='contain' autoplay='true' controls></video>
+      <!-- 标题层 -->
+      <view class="video-title-box">
+        {{item.text}}
+      </view>
+      <!-- 视频图片层 -->
+      <view data-id="{{index}}" class="video-image-box" style="display: {{ _index == index ? 'none' : 'block' }};" bindtap="videoPlay">
+        <view class="video-cover-box">
+          <image class="video-image" src="{{item.img}}" mode="aspectFit">
+          </image>
+        </view>
+        <!-- 视频按钮 -->
+        <image class="video-image-play" src="https://sucai.suoluomei.cn/sucai_zs/images/20200321105958-suspended%403x.png" mode="scaleToFill"></image>
+      </view>
+      <view class="carfrequency ">
+        <text class="carFreq">{{item.frequency}}次播放</text>
+        <text class="carTime">{{item.time}}</text>
+      </view>
+      <view class="carBotn">
+        <view class="carBtnli">
+          <image class="carPoto" src="{{item.poto}}"></image>
+          <text class="carName">{{item.name}}</text>
+        </view>
+        <view class="carBtnli">
+          <button class="carSharbt" data-id="{{item.id}}" open-type="share">
+            <image class="carShar" mode="widthFix" src="https://sucai.suoluomei.cn/sucai_zs/images/20200321110655-share%403x.png"></image>
+          </button>
+          <text class="carNum">{{item.shengao}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

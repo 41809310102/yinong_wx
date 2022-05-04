@@ -1,0 +1,33 @@
+
+<view class="container">
+
+<image src="cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/00/zhaoshang.png"></image>
+
+</view>
+
+<view class="login_box">
+  <image class="img"  src="cloud://hujunjie-59uot.6875-hujunjie-59uot-1300894345/banners/zhaoshang1.png"></image>
+  <view class="contain">
+      <view class="title">背景简介</view>
+      <view class="description">
+            <text space="emsp" decode="{{ true }}">{{des}}</text>
+      </view>
+      <view class="title">加盟合作方式</view>
+      <view class="description">
+            <view class="tip" bindtap="copy" data-copy="https://github.com/xuhuai66" data-name="链接">
+                 
+            </view>
+            <view class="tip" bindtap="copy" data-copy="xuhuai66" data-name="微信">
+                  <view>微信</view>:
+                  <text>hjj18891636438</text>
+            </view>
+            <view class="tip" bindtap="copy" data-copy="1604026596" data-name="QQ">
+                  <view>电话</view>:
+                  <text>18891636438</text>
+            </view>
+      </view>
+</view>
+</view>
+
+
+
